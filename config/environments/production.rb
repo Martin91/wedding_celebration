@@ -20,6 +20,10 @@ WeddingCelebration::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Using fonts in Rails
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
