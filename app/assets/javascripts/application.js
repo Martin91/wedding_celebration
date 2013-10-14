@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-picture-min
+//= require jquery.scrollTo.min
+//= require modernizr-2.6.2-respond-1.1.0.min
+//= require waypoints.min
 //= require_tree .

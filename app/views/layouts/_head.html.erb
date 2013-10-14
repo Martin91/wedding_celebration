@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Jiawei Wedding | <%= @page_slug || controller_name %></title>
+  <meta name="description" content="Welcome to the wedding website for Sarah and Brad's Big Day!">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  <%= yield :head %>
+
+  <!-- For iPhone 4 with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href=<%= asset_path "others/apple-touch-icon-114x114-precomposed.png" %>>
+  <!-- For first-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href=<%= asset_path "others/apple-touch-icon-72x72-precomposed.png" %>>
+  <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href=<%= asset_path "others/apple-touch-icon-precomposed.png" %>>
+
+  <%= stylesheet_link_tag "application", media: :all %>
+
+  <%= javascript_include_tag "application" %>
+</head>
