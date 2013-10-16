@@ -4,9 +4,12 @@ gem 'rails', '3.2.14'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'sqlite3'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem "capistrano", "~> 2.15.5"
+  gem "capistrano-ext", "~> 1.2.1"
+  gem "rvm-capistrano", "~> 1.5.1"
 end
 
 
