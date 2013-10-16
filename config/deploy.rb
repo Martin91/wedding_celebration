@@ -22,6 +22,15 @@ set :default_stage, 'production'
 # If not use use false, will produce error "no tty present and no askpass program specified"
 set :use_sudo, false
 
+namespace :db do
+  desc "Copy database config file"
+  task :copy_database_config, except: { no_release: true }, role: :app do
+    run "cp #{shared_path}/config/database.yml #{release_path}/config/"
+  end
+end
+
+after "deploy:finalize_update", "db:copy_database_config"
+
 # role :web, "your web-server here"                          # Your HTTP server, Apache/etc
 # role :app, "your app-server here"                          # This may be the same as your `Web` server
 # role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
