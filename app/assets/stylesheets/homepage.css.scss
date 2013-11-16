@@ -906,6 +906,9 @@ a.email {
   p {
     font-family: "Hamburger";
     text-align: center;
+    img {
+      max-width: 100%;
+    }
   }
 
   .statement {
