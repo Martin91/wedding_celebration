@@ -1,4 +1,8 @@
+# encoding: utf-8
+
 ActiveAdmin.register AdminUser do
+  menu label: "管理员账号"
+
   index do
     column :email
     column :current_sign_in_at

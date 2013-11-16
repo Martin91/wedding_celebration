@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 ActiveAdmin.register Blessing do
+  menu label: "祝福"
+
   form do |f|
     f.inputs do
       f.input :editor, label: "留言人姓名"
