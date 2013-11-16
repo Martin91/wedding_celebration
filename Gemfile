@@ -14,6 +14,7 @@ group :development, :test do
 end
 
 gem 'activeadmin'
+gem 'active_admin_editor'
 
 # Gems used only for assets and not required
 # in production environments by default.
