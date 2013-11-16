@@ -36,15 +36,46 @@
 </div> <!-- #bg-container -->
 
 <script type="text/javascript">
-  var map = new BMap.Map("map");          // 创建地图实例
+$(document).ready(function(){
+  var map = new BMap.Map("map", {
+    mapType: BMAP_HYBRID_MAP
+  });          // 创建地图实例
 
   var geoCoder = new BMap.Geocoder();
-  var point = new BMap.Point(116.40987346297, 23.312994439687);  // 创建点坐标
-  map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+  var point = new BMap.Point(116.41287346297, 23.313994439687);  // 创建点坐标
+  map.centerAndZoom(point, 13);               // 初始化地图，设置中心点坐标和地图级别
   map.enableScrollWheelZoom();
   map.enableContinuousZoom();
 
   // Show the marker of target
-  var marker = new BMap.Marker(point);
-  marker.initialize(map);
+  var marker = new BMap.Marker(point, {
+    title: "快来点我啊，有好礼相送"
+  });
+  map.addOverlay(marker);
+
+  var infoWindow = new BMap.InfoWindow("<img src='http://ww3.sinaimg.cn/mw1024/9b87d575jw1e8pcwnphvvj20am0hsaad.jpg' style='max-width: 180px'><img src='http://ww3.sinaimg.cn/mw1024/9b87d575jw1e8pchtqib0j20hr0ovtab.jpg' style='max-width: 217px'>", {
+    width: 400,
+    title: "<h3 style='font-family: \"Hamburger\";'>围仔小老洪佳伟甲阿佳伟嫂(羡慕嫉妒恨!!!)</h3>"
+  });
+  map.addOverlay(infoWindow);
+
+  map.addEventListener('zoomend', function(e) {
+    map.setCenter(point);
+    marker.setPosition(point);
+
+    var currentZoom = map.getZoom();
+    if(currentZoom > 13) {
+      map.setMapType(BMAP_NORMAL_MAP);
+    } else {
+      map.setMapType(BMAP_HYBRID_MAP);
+    }
+  });
+
+  marker.addEventListener('click', function(e){
+    marker.openInfoWindow(infoWindow);
+  });
+});
+
 </script>
+
+<!-- http://ww3.sinaimg.cn/mw1024/9b87d575jw1e8pcwnphvvj20am0hsaad.jpg -->
