@@ -163,7 +163,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endCo
 #introtext .head-sarah {
   /* font-family: "EdwardianScrAltITCTT", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
   font-family: "Hamburger";
-  font-size: 5em;
+  font-size: 4em;
   line-height: 100%;
 }
 #introtext .amp {
@@ -175,7 +175,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B2000000, endCo
 #introtext .head-brad {
   //font-family: "futura_ltbook", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-family: "Hamburger";
-  font-size: 2em;
+  font-size: 4em;
   line-height: 100%;
 }
 #introtext .date {
@@ -365,7 +365,7 @@ body {
 }
 
 #introtext .head-sarah {
-  font-size: 7em;
+  font-size: 5em;
 }
 #introtext .amp {
   position: relative;
@@ -374,7 +374,7 @@ body {
   margin-left: -20px;
 }
 #introtext .head-brad {
-  font-size: 3em;
+  font-size: 5em;
 }
 #introtext .date {
   font-size: 1.1em;
@@ -476,14 +476,14 @@ WIDE: Menu
 ============ */
 
 #introtext .head-sarah {
-  font-size: 9em;
+  font-size: 6em;
 }
 #introtext .amp {
   top: 0;
   font-size: 1em;
 }
 #introtext .head-brad {
-  font-size: 4em;
+  font-size: 6em;
 }
 #introtext .date {
   font-size: 2em;
@@ -552,14 +552,14 @@ margin: 0 auto;
 }
 
 #introtext .head-sarah {
-  font-size: 11em;
+  font-size: 8em;
 }
 #introtext .amp {
   top: 0;
-  font-size: 1.1em;
+  font-size: 0.8em;
 }
 #introtext .head-brad {
-  font-size: 5em;
+  font-size: 8em;
 }
 #introtext .date {
 
@@ -887,4 +887,9 @@ a.email {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+}
+
+.big_titles {
+  font-family: "Hamburger";
+  font-size: 1.5em;
 }
