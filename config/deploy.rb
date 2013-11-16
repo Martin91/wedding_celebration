@@ -29,6 +29,14 @@ namespace :db do
   end
 end
 
+namespace :deploy do
+  desc "Touch restart file to make Passenger reload scripts"
+  task :touch_restart do
+    run "touch #{release_path}/tmp/restart.txt"
+  end
+end
+
+before "deploy:restart", "deploy:touch_restart"
 after "deploy:finalize_update", "db:copy_database_config"
 
 # role :web, "your web-server here"                          # Your HTTP server, Apache/etc
