@@ -13,6 +13,7 @@ group :development, :test do
   gem "rvm-capistrano", "~> 1.5.1"
 end
 
+gem 'activeadmin'
 
 # Gems used only for assets and not required
 # in production environments by default.
