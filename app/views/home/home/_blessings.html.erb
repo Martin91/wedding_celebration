@@ -3,7 +3,7 @@
     <h2>小老们个祝福</h2>
     <hr>
     <% @blessings.each do |bless| %>
-      <div class="xiaolao-title">小老<%= bless.editor %>在<%= l bless.created_at.localtime, format: :short %>留下祝福：</div>
+      <div class="xiaolao-title">小老<%= bless.editor %>在<%= l bless.created_at, format: :short %>留下祝福：</div>
       <p><%== bless.content %></p>
     <% end %>
   </div><!--end column-->
